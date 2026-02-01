@@ -1,19 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_hexadez.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 09:17:36 by acanadil          #+#    #+#             */
-/*   Updated: 2026/01/26 12:44:42 by acanadil         ###   ########.fr       */
+/*   Created: 2026/02/01 17:06:07 by acanadil          #+#    #+#             */
+/*   Updated: 2026/02/01 18:17:01 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
-
-// 1 2 3 4 \0
+#include "ft_printf.h"
 
 static int	numlen(long n)
 {
@@ -26,9 +23,9 @@ static int	numlen(long n)
 	}
 	else
 		d = 1;
-	while (n > 9)
+	while (n > 15)
 	{
-		n /= 10;
+		n /= 16;
 		++d;
 	}
 	++d;
@@ -39,13 +36,17 @@ static void	numins(long temp, char *dst, int len)
 {
 	char	c;
 
+	if (temp >= 16)
+		numins((temp / 16), dst - 1, len - 1);
+	temp %= 16;
 	if (temp >= 10)
-		numins((temp / 10), dst - 1, len - 1);
-	c = 48 + (temp % 10);
+		c = temp + 55;
+	else
+		c = 48 + temp;
 	dst[0] = c;
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoah(unsigned int n)
 {
 	char	*dst;
 	long	num;

@@ -6,28 +6,29 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:02:35 by acanadil          #+#    #+#             */
-/*   Updated: 2026/01/21 12:12:11 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:11:29 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../ft_printf.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(long n, int fd, int *count)
 {
 	char	num;
 
 	if (n == -2147483648)
 	{
-		write(fd, "-2147483648", 11);
-		return ;
+		*count = write(fd, "-2147483648", 11);
+		return (*count);
 	}
 	if (n < 0)
 	{
 		n = -n;
-		write(fd, "-", 1);
+		*count += write(fd, "-", 1);
 	}
 	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n / 10, fd, count);
 	num = 48 + (n % 10);
-	write(fd, &num, 1);
+	*count += write(fd, &num, 1);
+	return (*count);
 }

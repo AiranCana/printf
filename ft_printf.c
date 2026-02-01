@@ -6,13 +6,12 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 10:38:17 by acanadil          #+#    #+#             */
-/*   Updated: 2026/01/30 16:02:59 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/01 18:53:36 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-//pxX
 static int	operate(char *ope, va_list arg)
 {
 	int	i;
@@ -28,6 +27,12 @@ static int	operate(char *ope, va_list arg)
 		i += ft_putnbr(va_arg(arg, int));
 	if (*ope == 'u')
 		i += ft_putnbr(va_arg(arg, unsigned int));
+	if (*ope == 'x')
+		i += ft_putstr(ft_tolowercase(ft_itoah(va_arg(arg, unsigned int))));
+	if (*ope == 'X')
+		i += ft_putstr(ft_touppercase(ft_itoah(va_arg(arg, unsigned int))));
+	if (*ope == 'p')
+		i += ft_putdir((unsigned long)va_arg(arg, void *));
 	return (i);
 }
 

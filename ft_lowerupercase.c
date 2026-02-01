@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lowerupercase.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 10:56:37 by acanadil          #+#    #+#             */
-/*   Updated: 2026/01/26 10:55:58 by acanadil         ###   ########.fr       */
+/*   Created: 2026/02/01 17:47:28 by acanadil          #+#    #+#             */
+/*   Updated: 2026/02/01 18:22:47 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_putendl_fd(char *s, int fd)
+char	*ft_tolowercase(char *s)
 {
-	while (*s)
-		write(fd, s++, 1);
-	write(fd, "\n", 1);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		s[i] = ft_tolower(s[i]);
+		i++;
+	}
+	return (s);
+}
+
+char	*ft_touppercase(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		s[i] = ft_toupper(s[i]);
+		i++;
+	}
+	return (s);
 }

@@ -6,11 +6,11 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 09:35:43 by acanadil          #+#    #+#             */
-/*   Updated: 2026/01/26 14:39:04 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:11:35 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../ft_printf.h"
 
 size_t	ft_strlen(const char *line)
 {

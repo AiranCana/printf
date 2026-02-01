@@ -6,11 +6,11 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 10:54:12 by acanadil          #+#    #+#             */
-/*   Updated: 2026/01/26 10:57:18 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:11:32 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../ft_printf.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

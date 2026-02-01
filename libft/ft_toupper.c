@@ -6,11 +6,11 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 13:53:18 by acanadil          #+#    #+#             */
-/*   Updated: 2026/01/16 14:04:06 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/01 19:11:41 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../ft_printf.h"
 
 int	ft_toupper(int c)
 {
