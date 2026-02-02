@@ -6,7 +6,7 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/30 10:38:17 by acanadil          #+#    #+#             */
-/*   Updated: 2026/02/01 18:53:36 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/02 15:58:14 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ static int	operate(char *ope, va_list arg)
 	i = 0;
 	if (*ope == 'c')
 		i += ft_putchar((char) va_arg(arg, int));
-	if (*ope == 's')
+	else if (*ope == 's')
 		i += ft_putstr(va_arg(arg, char *));
-	if (*ope == '%')
+	else if (*ope == '%')
 		i += ft_putchar('%');
-	if (*ope == 'd' || *ope == 'i')
+	else if (*ope == 'd' || *ope == 'i')
 		i += ft_putnbr(va_arg(arg, int));
-	if (*ope == 'u')
+	else if (*ope == 'u')
 		i += ft_putnbr(va_arg(arg, unsigned int));
-	if (*ope == 'x')
-		i += ft_putstr(ft_tolowercase(ft_itoah(va_arg(arg, unsigned int))));
-	if (*ope == 'X')
-		i += ft_putstr(ft_touppercase(ft_itoah(va_arg(arg, unsigned int))));
-	if (*ope == 'p')
-		i += ft_putdir((unsigned long)va_arg(arg, void *));
+	else if (*ope == 'x')
+		i += ft_putstrm(ft_tolowercase(ft_itoah(va_arg(arg, unsigned int))));
+	else if (*ope == 'X')
+		i += ft_putstrm(ft_touppercase(ft_itoah(va_arg(arg, unsigned int))));
+	else if (*ope == 'p')
+		i += ft_putdir(va_arg(arg, unsigned long));
 	return (i);
 }
 
@@ -42,6 +42,8 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	char	*s;
 
+	if (!str)
+		return (-1);
 	s = (char *) str;
 	i = 0;
 	va_start(arg, str);

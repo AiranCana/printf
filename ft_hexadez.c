@@ -6,7 +6,7 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 17:06:07 by acanadil          #+#    #+#             */
-/*   Updated: 2026/02/01 18:17:01 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/02 15:57:26 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,7 @@ static int	numlen(long n)
 {
 	int	d;
 
-	if (n < 0)
-	{
-		d = 2;
-		n = -n;
-	}
-	else
-		d = 1;
+	d = 1;
 	while (n > 15)
 	{
 		n /= 16;
@@ -46,7 +40,7 @@ static void	numins(long temp, char *dst, int len)
 	dst[0] = c;
 }
 
-char	*ft_itoah(unsigned int n)
+char	*ft_itoah(unsigned long n)
 {
 	char	*dst;
 	long	num;
