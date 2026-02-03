@@ -1,14 +1,16 @@
+_Este proyecto ha sido creado como parte del currículo de 42 por acanadil._
+
 # ft_printf 📺
 
 Este proyecto es la implementación en C de la función estándar `printf()` de la biblioteca `<stdio.h>`, recreando su **comportamiento básico** sin buffer.  
-Forma parte del currículo de 42 School y te introduce al uso de **funciones variádicas** y análisis de cadenas de formato. 2
+Forma parte del currículo de 42 School y te introduce al uso de **funciones variádicas** y análisis de cadenas de formato.
 
 ---
 
 ## 📌 Descripción
 
 `ft_printf` es una función que recibe una cadena de formato y un número variable de argumentos, y escribe en la salida estándar (stdout) texto formateado según los especificadores.  
-La implementación debe devolver el **número de caracteres impresos**, igual que la versión estándar. 3
+La implementación debe devolver el **número de caracteres impresos**, igual que la versión estándar.
 
 ---
 
