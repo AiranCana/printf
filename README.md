@@ -20,7 +20,7 @@ La implementación debe devolver el **número de caracteres impresos**, igual qu
 - Comprender y usar funciones de número variable de argumentos (`<stdarg.h>`).
 - Aprender a parsear cadenas de formato con distintos tipos de datos.
 - Entender cómo imprimir diferentes **format specifiers**.
-- Cumplir con la **Norma de C de 42 (Norminette)**. 4
+- Cumplir con la **Norma de C de 42 (Norminette)**.
 
 ---
 
@@ -43,7 +43,7 @@ Tu implementación de `ft_printf` debe:
 | `%X` | Entero en hexadecimal (mayúsculas) |
 | `%%` | Imprime `%` |
 
-Debes devolver el **número total** de caracteres escritos. 5
+Debes devolver el **número total** de caracteres escritos.
 
 ---
 
@@ -54,8 +54,10 @@ Puedes añadir soporte a:
 - **Flags**: `-`, `0`, `.`, `*`
 - Mínimos de campo (width) y precisión
 - Otros flags como `#`, `+` y espacio  
-(Estos bonus no son obligatorios, pero aportan valor) 6
+(Estos bonus no son obligatorios, pero aportan valor)
 
 ---
 
 ## 📂 Estructura del proyecto
+´´´sh
+make
