@@ -59,5 +59,6 @@ Puedes añadir soporte a:
 ---
 
 ## 📂 Estructura del proyecto
-´´´sh
-make
+
+```sh
+make 
