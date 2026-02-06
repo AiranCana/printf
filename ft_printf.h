@@ -6,7 +6,7 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 13:41:50 by acanadil          #+#    #+#             */
-/*   Updated: 2026/02/02 15:57:56 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/04 10:09:19 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stddef.h>
 # include <stdarg.h>
+# include <stdint.h>
 
 char	*ft_itoah(unsigned long n);
 char	*ft_tolowercase(char *s);

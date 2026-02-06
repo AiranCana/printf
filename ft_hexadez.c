@@ -6,13 +6,13 @@
 /*   By: acanadil <acanadil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 17:06:07 by acanadil          #+#    #+#             */
-/*   Updated: 2026/02/02 15:57:26 by acanadil         ###   ########.fr       */
+/*   Updated: 2026/02/04 12:23:39 by acanadil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	numlen(long n)
+static int	numlen(unsigned long n)
 {
 	int	d;
 
@@ -26,12 +26,12 @@ static int	numlen(long n)
 	return (d);
 }
 
-static void	numins(long temp, char *dst, int len)
+static void	numins(unsigned long temp, char *dst)
 {
 	char	c;
 
 	if (temp >= 16)
-		numins((temp / 16), dst - 1, len - 1);
+		numins((temp / 16), dst - 1);
 	temp %= 16;
 	if (temp >= 10)
 		c = temp + 55;
@@ -42,9 +42,9 @@ static void	numins(long temp, char *dst, int len)
 
 char	*ft_itoah(unsigned long n)
 {
-	char	*dst;
-	long	num;
-	int		len;
+	char			*dst;
+	unsigned long	num;
+	int				len;
 
 	num = n;
 	len = numlen(num);
@@ -52,11 +52,6 @@ char	*ft_itoah(unsigned long n)
 	if (!dst)
 		return (NULL);
 	dst[len - 1] = '\0';
-	if (num < 0)
-	{
-		dst[0] = '-';
-		num = -num;
-	}
-	numins(num, &dst[len - 2], len - 2);
+	numins(num, &dst[len - 2]);
 	return (dst);
 }
