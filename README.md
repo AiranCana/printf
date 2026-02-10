@@ -47,18 +47,17 @@ Debes devolver el **número total** de caracteres escritos.
 
 ---
 
-## 📈 Requisitos opcionales (Bonus)
-
-Puedes añadir soporte a:
-
-- **Flags**: `-`, `0`, `.`, `*`
-- Mínimos de campo (width) y precisión
-- Otros flags como `#`, `+` y espacio  
-(Estos bonus no son obligatorios, pero aportan valor)
-
----
-
-## 📂 Estructura del proyecto
+## 📂 Instrucciones de ejecución
 
 ```sh
 make 
+```
+
+---
+
+## 📚 Recursos
+
+- 📄 **Man page de `printf`**  
+
+  ```bash
+  man 3 printf
